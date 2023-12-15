@@ -3,8 +3,10 @@ import MovieModel from "../model/moviesModel.js";
 
 export const getAllMovies = async (req, res) => {
   try {
-    const movies = await MovieModel.find({});
-    res.send(movies);
+    const movies = await MovieModel.find({})// .populate('category', 'name');
+    console.log(movies);
+    
+    res.send(movies); 
   } catch (error) {
     res.status(500).json({ message: error });
   }

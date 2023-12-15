@@ -4,7 +4,7 @@ import Categories from "../model/categoryModel.js"
 //GET
 export const getAllCategories = async (req, res) => {
     try {
-      const category = await Categories.find({});
+      const category = await Categories.find({})
       res.send(category);
     } catch (error) {
       res.status(500).json({ message: error });

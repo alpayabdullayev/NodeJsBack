@@ -33,12 +33,12 @@ function App() {
   }, [])
   
 
-  const getCategoryNamesForMovie = (movie) => {
-    return movie.category.map((categoryId) => {
-      const foundCategory = category.find((category) => category._id === categoryId);
-      return foundCategory ? foundCategory.name : '';
-    });
-  };
+  // const getCategoryNamesForMovie = (movie) => {
+  //   return movie.category.map((categoryId) => {
+  //     const foundCategory = category.find((category) => category._id === categoryId);
+  //     return foundCategory ? foundCategory.name : '';
+  //   });
+  // };
 
   return (
     <>
@@ -47,7 +47,7 @@ function App() {
         movies.map((movie)=>(
           <div>
             <h1>{movie.name}</h1>
-            <p> <p>Categories: {getCategoryNamesForMovie(movie).join(', ')}</p></p>
+            {/* <p> <p>Categories: {getCategoryNamesForMovie(movie).join(', ')}</p></p> */}
             <p>{movie.category}</p>
           </div>
         ))
